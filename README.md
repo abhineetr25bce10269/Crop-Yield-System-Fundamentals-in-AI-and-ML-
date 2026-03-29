@@ -1,2 +1,68 @@
-# Crop-Yield-System-Fundamentals-in-AI-and-ML-
-A crop yield prediction system built by me using weighted Machine Learning logic. Enter the predicted and actual field conditions — [rainfall, temperature, humidity, soil pH, sunlight , irrigation]-  to estimate and compare the yield. It is built in both Python and Prolog programming languages.
+# 🌽Crop-Yield-System-Fundamentals-in-AI-and-ML-🌽
+➡️A crop yield prediction system built by me using weighted Machine Learning logic. Enter the predicted and actual field conditions — [rainfall, temperature,   humidity, soil pH, sunlight , irrigation]-  to estimate and compare the yield. It is built in both Python and Prolog programming languages.
+
+# 1️⃣Crop Yield Prediction System
+This is basically a simple machine learning inspired project that predicts crop yield based on field conditions (weather,soil...) and compares it with the actual yield after harvest. This project has been implemented in two programming languages — Python and Prolog — to demonstrate how the same logic can be expressed in both a procedural and a declarative programming style.
+
+# What Is This Project❓
+➡️You can enter your predicted field conditions before the season → will get a predicted yield
+➡️Then enter the actual field conditions after harvesting  →will get the actual yield
+➡️The system shows the difference between both and displays a graph for easy comparison
+
+# 🧑‍💻Logic Working🧑‍💻
+# 👉Step 1 — Historical Data
+Five past seasons are stored, each containing 7 field conditions and a final yield value. This done to get an approximate idea. The fields recorded for each season are Rainfall (mm), Temperature (°C), Humidity (%), Fertilizer (kg/ha), Soil pH, Sunlight (hrs), Irrigation level (0-10), and the final Yield (tons/ha).
+
+# 👉Step 2 — Weight Calculation
+For each of the 7 features, a weight is calculated as:
+weight = average( yield / feature_value )  across all seasons.
+This tells us how much yield one unit of each feature contributes.
+
+# 👉Step 3 — Yield Formula
+The same formula is applied to both predicted and actual inputs:
+
+# 👉Step 4 — Comparison
+Difference = Actual yield − Predicted yield
+A positive value means actual yield was higher than predicted. A negative value means it was lower.
+
+# 🖱️Input Parameters🖱️
+The system accepts 7 input values — Rainfall (mm), Temperature (°C), Humidity (%), Fertilizer (kg/ha), Soil pH (0–14), Sunlight (hours/day), and Irrigation Level (0–10). These are entered twice — once for predicted conditions and then for actual ones.
+
+# 📁File Structure📁
+├── crop_yield_prediction.py    # Python version with line graph (attached)🐍
+
+├── crop_yield_prediction.pl    # Prolog version for SWISH (attached)⌨️
+
+# 🐍Python Version🐍
+# What to Expect❗
+👉The program prompts you to enter 7 predicted field conditions
+👉Then prompts for 7 actual field conditions
+👉Displays predicted yield, actual yield, and difference
+👉Shows a line graph comparing both values
+
+# 🐛Prolog Version🐛
+In the query box at the bottom, type:
+predict(3000,32,75,45,6.8,9.0,6, 2800,30,78,42,6.5,8.5,5).
+Replace the 14 numbers with your own values and click Run!
+# ❓Query Format
+predict(3000,32,75,67,6.8,9,6,2800,30,78,42,6.5,8.5,5)
+The first six values in the query statements corresponds to the predicted value of the Rainfall, Temperature, Humidity, Fertilizer, Soil pH, Sunlight and Irrigation Level
+# What to Expect❗
+👉It will display the  predicted and actual field conditions
+👉Then shows both yield values and the difference
+
+# 🏛️Built With🏛️
+
+🐍Python — uses core concepts like lists, loops, and functions, along with the Matplotlib library for plotting the line graph.
+
+🐛Prolog — uses logic programming concepts including facts, rules, recursion, and the built-in findall/3 predicate. Runs on SWI-Prolog via the SWISH online compiler.
+
+# 🚀Future Enhancements🚀
+👉Based on the entered weather conditions, the program would be able to use machine learning to predict the irrigation and fertiliser used to get a better yeild.
+👉Currently only 7 factors are used. You could add more like wind speed, pest activity, crop variety, altitude, or soil type to improve prediction accuracy.
+👉If predicted yield falls below a certain threshold, automatically alert the user with suggestions — like increasing fertilizer or irrigation — to improve the outcome.
+
+# 💯Purpose of the project💯
+This project was built as a learning exercise to understand how basic ML concepts like weighted averages can be implemented in different programming languages — object-procedural (Python) and logic-declarative (Prolog).
+
+
